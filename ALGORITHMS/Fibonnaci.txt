@@ -1,0 +1,34 @@
+
+[0 ,  1 ," "]
+ 0 , 1 , 2
+
+function fibonacci(fibnum){
+    let arr = [];
+    if(fibnum < 2) return []
+    else{
+        for(let start=0 ; start<=fibnum-1 ; start++){  // O(n)
+             let sum = 0 ;
+            if(start == 0 || start == 1){
+                console.log("sum", start , " ", start)
+                arr.push(start);
+                continue;
+            }
+                        
+            //for(let sumArray = start-1 ; sumArray>=start-2 ;   sumArray--){ // O(2)
+            //        sum = sum + arr[sumArray]
+            //}
+            sum = arr[start - 1] + arr[start - 2];
+            
+            console.log("sum", start , " ", sum)
+            arr.push(sum);
+        }
+        return arr
+    }  
+    
+    // O(n)
+    
+    
+}
+
+console.log(fibonacci(7));
+console.log("Hello world");

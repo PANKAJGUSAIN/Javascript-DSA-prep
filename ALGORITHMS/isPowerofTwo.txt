@@ -1,0 +1,52 @@
+console.log(Math.pow(2 , 5));
+console.log(32%2);//true
+
+function pow(pownum , numoftimes){
+    let total = 1;
+    if(numoftimes == 0 ){
+        return total
+    }
+    for(let i= 1 ; i<=numoftimes ; i++){
+        total = total * pownum;
+    }
+    return total
+}
+
+function ispowerofTwo(number){
+    
+    for (let iterator = 0 ; iterator<=number ; iterator++){  // O(n)
+        const val = pow(2 , iterator);
+        if(val== number){
+            return "True"
+        }
+        else if (val > number) {
+            return "False"
+        }
+    }
+}
+function isPowerofTwomodified(n){
+    if(n < 1){
+        return false 
+    }
+    while(n > 1){
+        if(n%2 !== 0){
+            return false 
+        }
+        n = n/2;
+    }
+    return true
+}
+function isPowerofTwoBitwise(n){
+    if(n<1)return false
+    return ( n & n - 1) === 0
+}
+
+console.log(ispowerofTwo(32))   // O(n)
+console.log(isPowerofTwomodified(32)) // O(logn)
+console.log(isPowerofTwoBitwise(32)) // O(1)
+
+
+
+
+
+

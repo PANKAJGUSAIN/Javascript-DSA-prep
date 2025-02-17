@@ -1,0 +1,17 @@
+function isPrime(n){
+    if(n < 2){
+        return "no its not "
+    }
+    else{
+        for( let start = 2 ; start < Math.sqrt(n) ; start++){ // O(n)
+            if( n % start == 0) return `NO its not a prime `
+        }
+        return `YES its a prime `
+    }
+}
+
+console.log(isPrime(1))
+console.log(isPrime(5))
+console.log(isPrime(4))
+
+// O(n)

@@ -1,0 +1,9 @@
+function recursiveFibonnaci(n){
+    //base case 
+    if(n < 2){
+        return n 
+    }
+    
+    return recursiveFibonnaci(n-1)+recursiveFibonnaci(n-2);
+}
+// O(n^2)
