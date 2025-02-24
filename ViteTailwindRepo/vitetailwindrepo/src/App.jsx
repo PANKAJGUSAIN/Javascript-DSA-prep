@@ -6,9 +6,15 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  const handleClick = () =>{
+    setCount(prev => prev + 1)
+    setCount(prev => prev + 1)
+    console.log(count) // still gets the old value . if you want to use new value use useeffect
+  }
+
   return (
     <>
-     <h1 className='bg-green-400'>test tailwind</h1>
+     <button className='font-extrabold' onClick={handleClick}>test tailwind {count}</button>
     </>
   )
 }
