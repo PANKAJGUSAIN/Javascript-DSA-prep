@@ -1,10 +1,12 @@
 import './App.css'
+import { SearchBar } from './Questions'
 
 function App() {
   return (
     <>
-      <div className='text-3xl font-bold underline'>
-        <h1> HELLO WORLD </h1>
+      <div className='h-full w-full font-bold'>
+        <h1 className='text-center'> HELLO WORLD </h1>
+        <SearchBar/>
       </div>
     </>
   )
