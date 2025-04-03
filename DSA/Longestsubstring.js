@@ -12,7 +12,6 @@ for(let i= 0 ; i<sarr.length ; i++){
         } 
         str +=key ; 
         hash[key] = true ;
-        console.log(str);
         if(str.length > maxSubarr.length){
             maxSubarr = str
         }
@@ -20,3 +19,4 @@ for(let i= 0 ; i<sarr.length ; i++){
         j++
     }
 }
+console.log(maxSubarr);
