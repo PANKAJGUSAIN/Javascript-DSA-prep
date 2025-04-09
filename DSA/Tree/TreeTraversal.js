@@ -22,6 +22,15 @@ function preorderTraversal(node) {
     preorderTraversal(node.right);    // Step 3: then Traverse the right subtree
 }
 
+function inorderTraversal(node){
+    if(!node) return ; 
+    
+    inorderTraversal(node.left);
+    console.log(node.val);
+    inorderTraversal(node.right);
+    
+}
+
 // Step 2: Connect the nodes
 root.left = node2;
 root.right = node3;
@@ -30,4 +39,6 @@ node2.right = node5;
 
 console.log("rooot" , root);
 
-preorderTraversal(root)
+preorderTraversal(root);
+console.log('---------')
+inorderTraversal(root);
