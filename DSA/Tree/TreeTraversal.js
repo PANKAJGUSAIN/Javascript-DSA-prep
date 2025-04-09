@@ -39,6 +39,20 @@ function postorderTraversal(node){
     console.log(node.val);
 }
 
+function BreadthFirstSearch(node){
+    const queue = [];
+    if (!node) return;
+    queue.push(node);
+    let length = queue.length;
+    while(length !== 0){
+        const node = queue.shift()
+        console.log(node.val)
+        if(node.left) queue.push(node.left);
+        if(node.right) queue.push(node.right);
+        length = queue.length
+    }
+}
+
 // Step 2: Connect the nodes
 root.left = node2;
 root.right = node3;
@@ -52,3 +66,5 @@ console.log('---------')
 inorderTraversal(root);
 console.log('---------')
 postorderTraversal(root);
+console.log('---------')
+BreadthFirstSearch(root);
