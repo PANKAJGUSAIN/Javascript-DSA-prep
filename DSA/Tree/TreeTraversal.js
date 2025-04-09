@@ -31,6 +31,14 @@ function inorderTraversal(node){
     
 }
 
+function postorderTraversal(node){
+    if(!node) return 
+    
+    postorderTraversal(node.left)
+    postorderTraversal(node.right)
+    console.log(node.val);
+}
+
 // Step 2: Connect the nodes
 root.left = node2;
 root.right = node3;
@@ -42,3 +50,5 @@ console.log("rooot" , root);
 preorderTraversal(root);
 console.log('---------')
 inorderTraversal(root);
+console.log('---------')
+postorderTraversal(root);
