@@ -1,4 +1,4 @@
-let nums = [-1,0,3,5,9,12], target = 9 
+let nums = [5,7,7,8,9,10], target = 8 
 
 function search(num , target){
 
