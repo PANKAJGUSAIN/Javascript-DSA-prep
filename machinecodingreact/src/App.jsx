@@ -1,12 +1,12 @@
 import { Suspense } from 'react'
 import './App.css'
-import { SearchBar } from './Questions'
+import { SearchBar, ThemeSet } from './Questions'
 import { Routes ,Route, Link, NavLink} from 'react-router-dom'
 
 function App() {
   const links = [
     { to: "/SearchBar", label: "Search Bar" },
-    { to: "/ThemeContext" , label:"Theme Context"}
+    { to: "/ThemeSet" , label:"Theme Context"}
   ]
   return (
     <>
@@ -28,6 +28,7 @@ function App() {
         <Suspense fallback={<>Loading...</>}>
           <Routes>
             <Route path="/SearchBar" element={<SearchBar />} />
+            <Route path="/ThemeSet" element={<ThemeSet />} />
           </Routes>
         </Suspense>
       </div>
