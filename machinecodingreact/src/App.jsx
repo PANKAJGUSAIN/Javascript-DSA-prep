@@ -1,12 +1,13 @@
 import { Suspense } from 'react'
 import './App.css'
-import { SearchBar, ThemeSet } from './Questions'
+import { SearchBar, ThemeSet, Todo } from './Questions'
 import { Routes ,Route, Link, NavLink} from 'react-router-dom'
 
 function App() {
   const links = [
     { to: "/SearchBar", label: "Search Bar" },
-    { to: "/ThemeSet" , label:"Theme Context"}
+    { to: "/ThemeSet" , label:"Theme Context"},
+    { to: "/TodoRedux", label: "TodoRedux" }
   ]
   return (
     <>
@@ -29,6 +30,7 @@ function App() {
           <Routes>
             <Route path="/SearchBar" element={<SearchBar />} />
             <Route path="/ThemeSet" element={<ThemeSet />} />
+            <Route path="/TodoRedux" element={<Todo />} />
           </Routes>
         </Suspense>
       </div>
