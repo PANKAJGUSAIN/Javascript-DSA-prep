@@ -38,7 +38,7 @@ export const SearchBar = () => {
         if( index == -1 || !searchText ) return <p className="no-underline">{text}</p>;
 
         const beforeMatch = text.slice(0 , index);
-        const match = text.slice(index , index + searchText.length -1);
+        const match = text.slice(index , index + searchText.length);
         const afterMatch = text.slice(index+searchText.length);
 
         return (
