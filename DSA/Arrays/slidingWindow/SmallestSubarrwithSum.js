@@ -2,6 +2,7 @@
 //Output: 2  
 // Explanation: The subarray [4,3] has sum >= 7 and is the smallest.
 
+// leetcode - 209
 
 //o(n2)
 let arr = [2, 3, 1, 2, 4, 3] ; 
